@@ -1,0 +1,8 @@
+#put in ~/.bashrc file
+
+export AWS_ACCESS_KEY_ID='HERE'
+export AWS_SECRET_ACCESS_KEY='HERE'
+export ANSIBLE_SSH_ARGS="-o ForwardAgent=yes"
+export EC2_INI_PATH=/etc/ansible/ec2.ini
+export ANSIBLE_HOSTS=/etc/ansible/ec2.py
+export ANSIBLE_HOST_KEY_CHECKING=False

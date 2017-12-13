@@ -1,0 +1,11 @@
+install awscli
+
+Centos
+
+yum install -y awscli
+
+fedora 26
+
+dnf install -y awscli
+
+put ec2 file in /etc/ansible
