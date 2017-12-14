@@ -1,0 +1,8 @@
+- hosts: IP-PRODUCTION
+  remote_user: ec2-user
+  tasks:
+  - name: Pulling master, please wait ..
+    action: shell cd /var/www/public_html/ || exit; unset GIT_DIR; git fetch && git add --all && git reset --hard origin/master
+
+
+#if you use tag you can change hosts ip to tag_NAME
