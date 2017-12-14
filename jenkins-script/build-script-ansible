@@ -11,13 +11,14 @@ case  "${GIT_BRANCH}"  in
      'origin/master')
         # for master branch
 		echo "Pulling prod, please wait .."
-		ssh root@[SERVER-IP] 'ansible-playbook /etc/ansible/playbook/production.yml --flush-cache'
+		ssh root@[SERVER-IP] 'ansible-playbook /etc/ansible/playbook/production.yml --flush-cache' #webserver.yml
         ;;
         
      'origin/staging')
         # for staging branch
         echo "Pulling stage, please wait .."
-		ssh root@[SERVER-IP] 'ansible-playbook /etc/ansible/playbook/staging.yml --flush-cache'
+		ssh root@[SERVER-IP] 'ansible-playbook /etc/ansible/playbook/staging.yml --flush-cache' #webserver.yml
         ;;
+#or you can use 1 file webserver.ym
         
 esac

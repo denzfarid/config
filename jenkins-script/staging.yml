@@ -1,4 +1,4 @@
-- hosts: IP-PRODUCTION
+- hosts: IP-STAGING
   remote_user: ec2-user
   tasks:
   - name: Pulling staging, please wait ..
