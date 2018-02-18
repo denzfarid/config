@@ -58,12 +58,12 @@ echo -e "\n"
 echo "##############"
 echo "# Nginx Repo #"
 echo "##############"
-yum localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
+yum -y localinstall http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpm
 
 echo -e "\n"
 echo "######################"
 echo "# Brotli & pagespeed #"
 echo "#####################"
-yum localinstall https://extras.getpagespeed.com/redhat/7/noarch/RPMS/getpagespeed-extras-7-0.el7.gps.noarch.rpm &&
+yum -y localinstall https://extras.getpagespeed.com/redhat/7/noarch/RPMS/getpagespeed-extras-7-0.el7.gps.noarch.rpm &&
 yum install nginx-module-nbr  nginx-module-nps -y
 
