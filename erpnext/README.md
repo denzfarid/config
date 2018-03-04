@@ -27,7 +27,7 @@ refference article
    `sudo su - bench`
 
 5. Clone the Bench repository in home bench
-   `cd 
+   `cd; 
    git clone https://github.com/frappe/bench bench-repo`
 
 6. Install Bench using pip.
