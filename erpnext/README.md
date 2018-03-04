@@ -5,7 +5,7 @@ alt="Kecoa Terbang" width="240" height="180" border="10" /></a>
 
 1. you must run install.sh and back again to readme
 
-refference article
+reference article
 
 1. https://www.vultr.com/docs/how-to-install-erpnext-open-source-erp-on-centos-7
 2. https://www.jamescoyle.net/how-to/1717-manually-install-erpnext-on-a-manual-install-of-frappe
