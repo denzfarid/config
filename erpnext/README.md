@@ -1,3 +1,8 @@
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=747afZhmsTQ
+" target="_blank"><img src="http://img.youtube.com/vi/747afZhmsTQ/0.jpg" 
+alt="Kecoa Terbang" width="240" height="180" border="10" /></a>
+
+
 1. you must run install.sh and back again to readme
 
 refference article
@@ -80,8 +85,8 @@ Enter y to proceed. Once Bench has finished installing the configuration, provid
 
 If you are running a firewall on your server, you will need to configure the firewall to set an exception for HTTP service. Allow Nginx reverse proxy to connect from outside the network.
 
-```sudo firewall-cmd --zone=public --permanent --add-service=http```
-```sudo firewall-cmd --zone=public --permanent --add-service=https```
+```sudo firewall-cmd --zone=public --permanent --add-service=http;```
+```sudo firewall-cmd --zone=public --permanent --add-service=https;```
 ```sudo firewall-cmd --reload```
 
 ######################################
@@ -112,4 +117,3 @@ Bench also creates a crontab entry to automatically renew the certificates every
 
 3. Finally, enable scheduler to automatically run the scheduled jobs:
    ```bench enable-scheduler```
-
