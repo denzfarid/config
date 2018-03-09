@@ -53,6 +53,17 @@ echo "#####################"
 echo "#     Setup Date    #"
 echo "#####################"
 sed -i "s/centos/id/g" /etc/ntp.conf
+sed -i "s/centos/id/g" /etc/chrony.conf
+timedatectl set-timezone Asia/Jakarta
+systemctl enable chronyd 
+systemctl enable ntpdate
+
+echo -e "\n"
+echo "#####################"
+echo "#     Setup php    #"
+echo "#####################"
+sed -i -e 's/expose_php = On/expose_php = Off/' /etc/php.ini
+sed -i "s/^;date.timezone =$/date.timezone = \"Asia\/Jakarta\"/" /etc/php.ini
 
 echo -e "\n"
 echo "##############"
