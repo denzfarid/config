@@ -5,10 +5,15 @@
 # Script : bash to install webserver Centos
 # 18 Feb 2018
 ##
+echo "###############"
+echo "# Generate Key #"
+echo "###############"
+ssh-keygen -t rsa -b 4096 -o -a 100 -f ~/.ssh/id_rsa -N "" > /dev/null
+
 echo "#######################"
 echo "# Install Development #"
 echo "######################"
-yum groupinstall "Development Tools"
+yum -y groupinstall "Development Tools"
 
 echo -e "\n"
 echo "#####################"
