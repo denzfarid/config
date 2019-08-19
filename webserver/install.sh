@@ -25,7 +25,7 @@ echo -e "\n"
 echo "############################"
 echo "#  install epel & other    #"
 echo "############################"
-yum install epel-release yum-presto -y && yum install net-tools cpan nano screen nfs-utils nfs-utils-lib rsync wget htop ntp ntpdate chrony bash-completion iftop iotop sysstat vim fpaste vnstat i2c-tools.x86_64 i2c-tools-eepromer.x86_64 lm_sensors.x86_64 httpd -y 
+yum install epel-release yum-presto -y && yum install httpd net-tools cpan nano screen nfs-utils nfs-utils-lib rsync wget htop ntp ntpdate chrony bash-completion iftop iotop sysstat vim fpaste vnstat i2c-tools.x86_64 i2c-tools-eepromer.x86_64 lm_sensors.x86_64 psmisc -y 
 
 
 echo -e "\n"
