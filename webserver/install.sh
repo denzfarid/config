@@ -25,7 +25,7 @@ echo -e "\n"
 echo "############################"
 echo "#  install epel & other    #"
 echo "############################"
-yum install epel-release yum-presto -y && yum install httpd net-tools cpan nano screen nfs-utils nfs-utils-lib rsync wget htop ntp ntpdate chrony bash-completion iftop iotop sysstat vim fpaste vnstat i2c-tools.x86_64 i2c-tools-eepromer.x86_64 lm_sensors.x86_64 psmisc -y 
+yum install epel-release yum-presto deltarpm -y && yum install httpd net-tools cpan nano screen nfs-utils nfs-utils-lib rsync wget htop ntp ntpdate chrony bash-completion iftop iotop sysstat vim fpaste vnstat i2c-tools.x86_64 i2c-tools-eepromer.x86_64 lm_sensors.x86_64 psmisc -y 
 
 
 echo -e "\n"
@@ -82,4 +82,17 @@ echo "# Brotli & pagespeed #"
 echo "#####################"
 yum -y localinstall https://extras.getpagespeed.com/redhat/7/noarch/RPMS/getpagespeed-extras-7-0.el7.gps.noarch.rpm &&
 yum install nginx-module-nbr  nginx-module-nps -y
+
+echo -e "\n"
+echo "################"
+echo "# Nginx Config #"
+echo "################"
+cd /etc/nginx/; mv nginx.conf ; wget https://raw.githubusercontent.com/denzfarid/config/master/webserver/nginx/nginx.conf ;  wget https://raw.githubusercontent.com/denzfarid/config/master/webserver/nginx/modules.conf
+cd conf.d; mv default.conf default.conf.bak ; wget https://raw.githubusercontent.com/denzfarid/config/master/webserver/nginx/conf.d/default.conf
+
+echo -e "\n"
+echo "################"
+echo "# Httpd Config #"
+echo "################"
+cd /etc/httpd/conf.d/ ; mv default.conf default.conf.bak ; wget https://raw.githubusercontent.com/denzfarid/config/master/webserver/httpd/conf.d/default.conf
 
