@@ -4,6 +4,7 @@
 # Author : Farid < farid_@msn.com >
 # Script : bash to install webserver Centos
 # 18 Feb 2018
+# remote from terminal : bash <(curl -s https://raw.githubusercontent.com/denzfarid/config/master/webserver/install.sh)
 ##
 echo "###############"
 echo "# Generate Key #"
@@ -13,7 +14,7 @@ ssh-keygen -t rsa -b 4096 -o -a 100 -f ~/.ssh/id_rsa -N "" > /dev/null
 echo "#######################"
 echo "# Install Development #"
 echo "######################"
-yum -y groupinstall "Development Tools"
+yum -y install yum-presto deltarpm; yum -y update ; yum -y groupinstall "Development Tools"
 
 echo -e "\n"
 echo "#####################"
@@ -25,8 +26,7 @@ echo -e "\n"
 echo "############################"
 echo "#  install epel & other    #"
 echo "############################"
-yum install epel-release yum-presto deltarpm -y && yum install httpd net-tools cpan nano screen nfs-utils nfs-utils-lib rsync wget htop ntp ntpdate chrony bash-completion iftop iotop sysstat vim fpaste vnstat i2c-tools.x86_64 i2c-tools-eepromer.x86_64 lm_sensors.x86_64 psmisc -y 
-
+yum install epel-release -y && yum install net-tools cpan nano screen nfs-utils nfs-utils-lib rsync wget htop ntp ntpdate chrony bash-completion iftop iotop sysstat vim fpaste vnstat i2c-tools.x86_64 i2c-tools-eepromer.x86_64 lm_sensors.x86_64 psmisc -y 
 
 echo -e "\n"
 echo "#################################"
@@ -69,6 +69,12 @@ echo "#     Setup php    #"
 echo "#####################"
 sed -i -e 's/expose_php = On/expose_php = Off/' /etc/php.ini
 sed -i "s/^;date.timezone =$/date.timezone = \"Asia\/Jakarta\"/" /etc/php.ini
+
+echo -e "\n"
+echo "######################"
+echo "#  install apache    #"
+echo "######################"
+yum install -y httpd httpd-tools mod_ssl 
 
 echo -e "\n"
 echo "##############"
